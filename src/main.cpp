@@ -24,7 +24,7 @@ void on_center_button() {
  */
 void initialize() {
 	pros::lcd::initialize();
-	pros::lcd::set_text(1, "how bout you get off ur computer and get some bitches");
+	pros::lcd::set_text(1, "pwease don't hurt us");
 	pros::lcd::register_btn1_cb(on_center_button);
 	piston.set_value(true);
 	inertial_sensor.calibrate();
