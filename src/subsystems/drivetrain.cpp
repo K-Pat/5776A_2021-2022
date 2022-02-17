@@ -45,23 +45,31 @@ std::shared_ptr<ChassisController> drive =
   int timer;
   int brakeMode;
 
+  int holdButton = 0;
+
 void updateDrive()
 {
   drive -> getModel() -> arcade(controller.getAnalog(ControllerAnalog::leftY), controller.getAnalog(ControllerAnalog::leftX));
 
-  if (controller.getDigital(ControllerDigital::A) == 1)
+  if (controller.getDigital(ControllerDigital::A) == 1 && holdButton == 0)
   {
     rightFront.setBrakeMode(AbstractMotor::brakeMode::hold);
     rightBack.setBrakeMode(AbstractMotor::brakeMode::hold);
     leftFront.setBrakeMode(AbstractMotor::brakeMode::hold);
     leftBack.setBrakeMode(AbstractMotor::brakeMode::hold);
+    leftHigh.setBrakeMode(AbstractMotor::brakeMode::hold);
+    rightHigh.setBrakeMode(AbstractMotor::brakeMode::hold);
+    holdButton = 1;
   }
-  else if (controller.getDigital(ControllerDigital::Y) == 1)
+  else if (controller.getDigital(ControllerDigital::A) == 1 && holdButton == 1)
   {
     rightFront.setBrakeMode(AbstractMotor::brakeMode::coast);
     rightBack.setBrakeMode(AbstractMotor::brakeMode::coast);
     leftFront.setBrakeMode(AbstractMotor::brakeMode::coast);
     leftBack.setBrakeMode(AbstractMotor::brakeMode::coast);
+    leftHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
+    rightHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
+    holdButton = 0;
   }
 
 }

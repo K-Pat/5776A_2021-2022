@@ -27,8 +27,14 @@ void initialize() {
 	pros::lcd::set_text(1, "how bout you get off ur computer and get some bitches");
 	pros::lcd::register_btn1_cb(on_center_button);
 	piston.set_value(true);
-	inertial_sensor.calibrate(); 
+	inertial_sensor.calibrate();
 	inertial_sensor2.calibrate();
+	rightFront.setBrakeMode(AbstractMotor::brakeMode::coast);
+	rightBack.setBrakeMode(AbstractMotor::brakeMode::coast);
+	leftFront.setBrakeMode(AbstractMotor::brakeMode::coast);
+	leftBack.setBrakeMode(AbstractMotor::brakeMode::coast);
+	leftHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
+	rightHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
 }
 
 /**
