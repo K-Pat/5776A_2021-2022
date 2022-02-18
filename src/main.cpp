@@ -88,7 +88,7 @@ void autonomous() {
  */
 void opcontrol() {
 
-	while (true) {
+	while (true) {//test
 		updateFourBarLiftMacro();
 		updateTwoBarLiftMacro();
 		updatePneumatics();
