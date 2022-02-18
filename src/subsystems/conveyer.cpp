@@ -23,7 +23,7 @@ void updateRollers()
   switch (rollerButtonCount)
   {
   case 1:
-    rollers.moveVelocity(300);
+    rollers.moveVelocity(600);
     break;
   case 2:
     rollers.moveVelocity(-185);

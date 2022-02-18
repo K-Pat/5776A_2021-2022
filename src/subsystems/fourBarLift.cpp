@@ -96,17 +96,17 @@ else if(abs(controller.getAnalog(ControllerAnalog::rightY))>0){
 switch (liftButtonCount)
 {
 case 1: //All the way up
-  fourBarLift.moveVelocity(fourBarPID(690));
+  fourBarLift.moveVelocity(fourBarPID(-690));
   //fourBarLift2.moveVelocity(fourBarPID(690));
   break;
 
 case 3: //set height for driving with mogo
-  fourBarLift.moveVelocity(fourBarPID(550));
+  fourBarLift.moveVelocity(fourBarPID(-550));
   //fourBarLift2.moveVelocity(fourBarPID(550));
   break;
 
 case 2: //all the way down
-  fourBarLift.moveVelocity(fourBarPID(15));
+  fourBarLift.moveVelocity(fourBarPID(-15));
   //fourBarLift2.moveVelocity(fourBarPID(15));
   break;
   /*

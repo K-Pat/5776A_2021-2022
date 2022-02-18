@@ -1,29 +1,29 @@
 #include "main.h"
 
 //Drivetrain Ports
-const int rightFrontPort = 6;//bottom
-const int rightBackPort = 13;//top
-const int leftFrontPort = 4;//top
-const int leftBackPort = 19;//bottom
-const int highLeftPort = 17;
-const int highRightPort = 18;
-const int IMUPort = 15;
-const int IMUport2 = 1;
+const int rightFrontPort = 10;//bottom
+const int rightBackPort = 11;//mid
+const int leftFrontPort = 13;//mid
+const int leftBackPort = 6;//bottom
+const int highLeftPort = 5;
+const int highRightPort = 1;
+const int IMUPort = 14;
+const int IMUport2 = 20;
 
 //Lift Ports
-const int fourBarLiftPort = 9;
+const int fourBarLiftPort = 16;
 
 //Roller Ports
-const int rollerPort = 5;
+const int rollerPort = 2;
 
 //Pneumatic Ports
-const char pneumaticPort = 'B';
+const char pneumaticPort = 'A';
 const char clamp2 = 'F';//actual clamp
-const char clamp3 = 'D';//pull back piston
-const char clamp4 = 'E';//pull back piston
+const char clamp3 = 'E';//pull back piston
+//const char clamp4 = 'D';//pull back piston
 
 //Potentiometer Ports
-const char pot1 = 'A';
+const char pot1 = 'B';
 const char pot2 = 'C';
 
 //Vision Sensor Ports
