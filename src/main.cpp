@@ -24,7 +24,7 @@ void on_center_button() {
  */
 void initialize() {
 	pros::lcd::initialize();
-	pros::lcd::set_text(1, "pwease don't hurt us");
+	pros::lcd::set_text(1, "goggles :)");
 	pros::lcd::register_btn1_cb(on_center_button);
 	piston.set_value(true);
 	piston3.set_value(true);
