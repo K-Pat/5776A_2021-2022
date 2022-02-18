@@ -26,7 +26,7 @@ void initialize() {
 	pros::lcd::initialize();
 	pros::lcd::set_text(1, "goggles :)");
 	pros::lcd::set_text(2, "hippity hoppity");
-	pros::lcd:;set_text(3, "Edemame");
+	pros::lcd::set_text(3, "Edemame");
 	pros::lcd::register_btn1_cb(on_center_button);
 	piston.set_value(true);
 	piston3.set_value(true);
