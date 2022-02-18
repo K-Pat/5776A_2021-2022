@@ -40,6 +40,12 @@
  * You should add more #includes here
  */
 #include "okapi/api.hpp"
+#include "globals.hpp"
+#include "subsys/drive.hpp"
+#include "subsys/lift.hpp"
+#include "subsys/conveyor.hpp"
+#include "subsys/tilter.hpp"
+#include "subsys/clamp.hpp"
 //#include "pros/api_legacy.h"
 
 /**
@@ -75,18 +81,6 @@ void opcontrol(void);
 /**
  * You can add C++-only headers here
  */
-
- #include "subsystems/drivetrain.hpp"
- #include "subsystems/fourBarLift.hpp"
- #include "subsystems/pneumatics.hpp"
- #include "subsystems/globals.hpp"
- #include "subsystems/ports.hpp"
- #include "subsystems/autonomous.hpp"
- #include "subsystems/conveyer.hpp"
-#include "subsystems/twobar.hpp"
- #include "subsystems/odometry.hpp"
-
-
 //#include <iostream>
 #endif
 

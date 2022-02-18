@@ -22,20 +22,16 @@ void on_center_button() {
  * All other competition modes are blocked by initialize; it is recommended
  * to keep execution time for this mode under a few seconds.
  */
+
 void initialize() {
 	pros::lcd::initialize();
-	pros::lcd::set_text(1, "pwease don't hurt us");
-	pros::lcd::register_btn1_cb(on_center_button);
-	piston.set_value(true);
-	piston3.set_value(true);
-	inertial_sensor.calibrate();
-	inertial_sensor2.calibrate();
-	rightFront.setBrakeMode(AbstractMotor::brakeMode::coast);
-	rightBack.setBrakeMode(AbstractMotor::brakeMode::coast);
-	leftFront.setBrakeMode(AbstractMotor::brakeMode::coast);
-	leftBack.setBrakeMode(AbstractMotor::brakeMode::coast);
-	leftHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
-	rightHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
+	drive::init();
+	conveyor::init();
+	lift::init();
+	clamp::init();
+	tilter::init();
+	drive::imu.calibrate();
+	drive::imu2.calibrate();
 }
 
 /**
@@ -67,12 +63,11 @@ void competition_initialize() {}
  * will be stopped. Re-enabling the robot will restart the task, not re-start it
  * from where it left off.
  */
-
-
 void autonomous() {
-	rightAuton();
-	//leftAuton();
+
+
 }
+
 /**
  * Runs the operator control code. This function will be started in its own task
  * with the default priority and stack size whenever the robot is enabled via
@@ -87,13 +82,19 @@ void autonomous() {
  * task, not resume it from where it left off.
  */
 void opcontrol() {
-
-	while (true) {//test
-		updateFourBarLiftMacro();
-		updateTwoBarLiftMacro();
-		updatePneumatics();
-		updateDrive();
-		updateRollers();
-		pros::delay(20);
+	while (1) {
+		//update
+		tilter::update();
+		clamp::update();
+		drive::update();
+		lift::update();
+		conveyor::update();
+		//act
+		tilter::act();
+		clamp::act();
+		drive::act();
+		lift::act();
+		conveyor::act();
+		pros::delay(5);
 	}
 }
