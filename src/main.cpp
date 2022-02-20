@@ -73,7 +73,7 @@ void competition_initialize() {}
 
 void autonomous() {
 	rightAuton();
-	//leftAuton();
+  //leftAuton();
 }
 /**
  * Runs the operator control code. This function will be started in its own task

@@ -18,7 +18,7 @@ void updatePneumatics()
 /*
    else if (controller.getDigital(ControllerDigital::A)==1){
      pneumaticButtonCount=3;
-   }/*
+   }
    else if (controller.getDigital(ControllerDigital::Y)==1){
      pneumaticButtonCount=4;
    }
@@ -35,7 +35,7 @@ void updatePneumatics()
      case 3:
       piston2.set_value(true);
       break;
-      /*
+
      case 4:
       piston2.set_value(false);
       twoBarLift.moveVelocity(twoBarPID(-155));

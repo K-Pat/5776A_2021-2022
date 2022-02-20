@@ -10,6 +10,7 @@ void rightAuton()
   piston.set_value(false);//unclamp four bar
   piston2.set_value(true);//unclamp two bar
   translatePID(65, 1000);//move forward to the right neutral.
+  pros::delay(10);
   piston.set_value(true);//clamp dow
   translatePID(-28, 1000);//move back
   //piston.set_value(false);//unclamp
@@ -20,9 +21,10 @@ void rightAuton()
   translatePID(-28, 500);
   pros::delay(750);
   piston2.set_value(false);
+  piston3.set_value(false);
   pros::delay(400);
   translatePID(25,750);
-  fourBarLift.moveVelocity(fourBarPID(690));
+  fourBarLift.moveVelocity(fourBarPID(-690));
   rollers.moveVelocity(200);
   pros::delay(5000);
     /*
