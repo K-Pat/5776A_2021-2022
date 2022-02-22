@@ -22,8 +22,7 @@ const char clamp2 = 'F';//actual clamp
 const char clamp3 = 'E';//pull back piston
 //const char clamp4 = 'D';//pull back piston
 
-//Potentiometer Ports
-const char pot1 = 'B';
-const char pot2 = 'C';
-
-//Vision Sensor Ports
+//Encoder Ports
+const char left = 'B';
+const char right = 'C';
+const char back = 'D';
