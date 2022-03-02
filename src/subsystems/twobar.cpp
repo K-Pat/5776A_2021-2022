@@ -6,7 +6,6 @@ int twoBarButtonCount;
 
 double targetTwoBar;
 
-pros::ADIDigitalOut piston3(clamp3);
 
 typedef struct PID pid;
 
@@ -27,11 +26,9 @@ void updateTwoBarLiftMacro()
   {
   case 1:
     piston2.set_value(true);
-    piston3.set_value(true);
     break;
   case 2:
     piston2.set_value(false);
-    piston3.set_value(false);
     //twoBarLift.moveVelocity(twoBarPID(-165));//160 is original
     break;
   }

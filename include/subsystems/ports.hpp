@@ -1,25 +1,25 @@
 #include "main.h"
 
 //Drivetrain Ports
-const int rightFrontPort = 10;//bottom
-const int rightBackPort = 11;//mid
-const int leftFrontPort = 13;//mid
-const int leftBackPort = 6;//bottom
-const int highLeftPort = 5;
-const int highRightPort = 1;
-const int IMUPort = 14;
-const int IMUport2 = 20;
+const int rightFrontPort = 15;//bottom
+const int rightBackPort = 14;//mid
+const int leftFrontPort = 3;//mid
+const int leftBackPort = 1;//bottom
+const int highLeftPort = 2;
+const int highRightPort = 13;
+const int IMUPort = 12;
+const int IMUport2 = 11;
 
 //Lift Ports
-const int fourBarLiftPort = 16;
+const int fourBarLiftPort = 4;
 
 //Roller Ports
-const int rollerPort = 2;
+const int rollerPort = 5;
 
 //Pneumatic Ports
 const char pneumaticPort = 'A';
 const char clamp2 = 'F';//actual clamp
-const char clamp3 = 'E';//pull back piston
+//const char clamp3 = 'E';//pull back piston
 //const char clamp4 = 'D';//pull back piston
 
 //Encoder Ports

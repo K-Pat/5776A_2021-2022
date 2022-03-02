@@ -2,7 +2,7 @@
 
 using namespace okapi;
 
-Motor fourBarLift(fourBarLiftPort, false, AbstractMotor::gearset::green, AbstractMotor::encoderUnits::degrees);
+Motor fourBarLift(fourBarLiftPort, false, AbstractMotor::gearset::red, AbstractMotor::encoderUnits::degrees);
 
 double targetL;
 double targetR;
@@ -56,14 +56,14 @@ case 1: //All the way up
   break;
 
 case 3: //set height for driving with mogo
-  fourBarLift.moveVelocity(fourBarPID(-550));
+  fourBarLift.moveVelocity(fourBarPID(-410));
   break;
 
 case 2: //all the way down
   fourBarLift.moveVelocity(fourBarPID(-15));
   break;
   case 4:
-    fourBarLift.moveVelocity(0);
+    fourBarLift.moveVelocity(fourBarPID(-100));
   break;
 
 }

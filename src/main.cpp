@@ -29,7 +29,6 @@ void initialize() {
 	pros::lcd::set_text(3, "Edemame");
 	pros::lcd::register_btn1_cb(on_center_button);
 	piston.set_value(true);
-	piston3.set_value(true);
 	inertial_sensor.calibrate();
 	inertial_sensor2.calibrate();
 	rightFront.setBrakeMode(AbstractMotor::brakeMode::coast);
@@ -72,8 +71,8 @@ void competition_initialize() {}
 
 
 void autonomous() {
-	rightAuton();
-  //leftAuton();
+	//rightAuton();
+  leftAuton();
 }
 /**
  * Runs the operator control code. This function will be started in its own task

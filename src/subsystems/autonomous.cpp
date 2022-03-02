@@ -21,7 +21,6 @@ void rightAuton()
   translatePID(-28, 500);
   pros::delay(750);
   piston2.set_value(false);
-  piston3.set_value(false);
   pros::delay(400);
   translatePID(25,750);
   fourBarLift.moveVelocity(fourBarPID(-690));
