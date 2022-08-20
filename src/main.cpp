@@ -25,6 +25,7 @@ void on_center_button() {
 
 void initialize() {
 	pros::lcd::initialize();
+<<<<<<< Updated upstream
 	drive::init();
 	conveyor::init();
 	lift::init();
@@ -32,6 +33,21 @@ void initialize() {
 	tilter::init();
 	drive::imu.calibrate();
 	drive::imu2.calibrate();
+=======
+	pros::lcd::set_text(1, "goggles :)");
+	pros::lcd::set_text(2, "hippity hoppity");
+	pros::lcd::set_text(3, "Edemame");
+	pros::lcd::register_btn1_cb(on_center_button);
+	piston.set_value(true);
+	inertial_sensor.calibrate();
+	inertial_sensor2.calibrate();
+	rightFront.setBrakeMode(AbstractMotor::brakeMode::coast);
+	rightBack.setBrakeMode(AbstractMotor::brakeMode::coast); //woa
+	leftFront.setBrakeMode(AbstractMotor::brakeMode::coast);
+	leftBack.setBrakeMode(AbstractMotor::brakeMode::coast);
+	leftHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
+	rightHigh.setBrakeMode(AbstractMotor::brakeMode::coast);
+>>>>>>> Stashed changes
 }
 
 /**
